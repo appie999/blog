@@ -1,0 +1,72 @@
+<div class="container mt-5">
+  <article class="blog-post">
+    <!-- Post Header -->
+    <header class="mb-4">
+      <div class="category-badge mb-2">
+        <span class="badge bg-secondary">{{post.category}}</span>
+        <span class="read-time ms-2">{{post.readTime}}</span>
+      </div>
+      <h1 class="display-4 fw-bold">{{post.title}}</h1>
+      <div class="post-meta text-muted mb-2">
+        <span class="me-3">
+          <i class="bi bi-person-circle"></i> {{post.author}}
+        </span>
+        <span>
+          <i class="bi bi-calendar3"></i> {{post.date | date:'mediumDate'}}
+        </span>
+      </div>
+      <div class="tags mb-3">
+        <span *ngFor="let tag of post.tags" 
+              class="badge bg-primary me-2">
+          #{{tag}}
+        </span>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="featured-image mb-4">
+      <img [src]="post.image" 
+           class="img-fluid rounded shadow-sm" 
+           [alt]="post.title">
+    </div>
+
+    <!-- Post Content -->
+    <div class="post-content">
+      <p class="lead first-paragraph">
+        {{post.content}}
+      </p>
+    </div>
+
+    <!-- Share Section -->
+    <div class="share-section mt-5">
+      <h5 class="mb-3">Share this article</h5>
+      <div class="d-flex gap-2">
+        <button class="btn btn-primary" (click)="shareOnSocial('facebook')">
+          <i class="bi bi-facebook"></i>
+        </button>
+        <button class="btn btn-info" (click)="shareOnSocial('twitter')">
+          <i class="bi bi-twitter"></i>
+        </button>
+        <button class="btn btn-success" (click)="shareOnSocial('linkedin')">
+          <i class="bi bi-linkedin"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Author Bio -->
+    <div class="author-bio mt-5 p-4">
+      <div class="d-flex align-items-center">
+        <img src="https://picsum.photos/100" 
+             class="rounded-circle me-3" 
+             alt="Author" 
+             width="60">
+        <div>
+          <h5 class="mb-1">{{post.author}}</h5>
+          <p class="text-muted mb-0">
+            Technical Writer & Web Developer
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
