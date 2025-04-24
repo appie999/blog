@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PostDetailComponent } from "./post-detail/post-detail.component";
+import { PostDetailComponent } from "./component/post-detail/post-detail.component";
 
 @Component({
   selector: 'app-root',
