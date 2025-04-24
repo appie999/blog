@@ -1,0 +1,94 @@
+.blog-header {
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .blog-header-logo {
+    letter-spacing: -0.5px;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+  
+  .brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .brand-link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .navbar .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease;
+    position: relative;
+    color: #333;
+  }
+  
+  .navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .navbar .nav-link:hover::after,
+  .navbar .nav-link.active::after {
+    width: 60%;
+  }
+  
+  .navbar .nav-link.active {
+    font-weight: 600;
+  }
+  
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 250px;
+      z-index: 1001;
+    }
+    
+    .navbar .nav-link::after {
+      left: 0;
+      transform: none;
+    }
+    
+    .navbar .nav-link:hover::after,
+    .navbar .nav-link.active::after {
+      width: 30px;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .blog-header {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
+    
+    .blog-header-logo {
+      font-size: 1.25rem !important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .blog-header.scrolled {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+  }

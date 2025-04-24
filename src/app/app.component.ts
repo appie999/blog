@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PostDetailComponent } from "./component/post-detail/post-detail.component";
+import { HeaderComponent } from './component/header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [PostDetailComponent],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
