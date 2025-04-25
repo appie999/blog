@@ -51,6 +51,7 @@
                 id="shortDescription" 
                 rows="2"
                 placeholder="A brief description that appears in article previews"
+                (keyup)="descriptionLengthController($event)"
               ></textarea>
               <div class="invalid-feedback">
                 <div>Short description is required</div>
@@ -58,7 +59,7 @@
               </div>
               <div class="form-text">
                 <span>
-                  0/200
+                  {{descriptionCounter}}/200
                 </span> characters
               </div>
             </div>
@@ -99,6 +100,7 @@
                 id="content" 
                 rows="10"
                 placeholder="Write your article content here..."
+                (keyup)="contentLengthController($event)"
               ></textarea>
               <div class="invalid-feedback">
                 <div>Content is required</div>
@@ -106,7 +108,7 @@
               </div>
               <div class="form-text">
                 <span>
-                  0
+                  {{contentCounter}}
                 </span> characters (minimum 200)
               </div>
             </div>
