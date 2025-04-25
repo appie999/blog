@@ -5,7 +5,7 @@
         <div class="col-md-8 mx-auto text-center hero-content">
           <h1 class="display-4 fw-bold text-white">MinimalBlog</h1>
           <p class="lead text-white">Thoughts, stories and ideas.</p>
-          <button class="btn btn-outline-light mt-3">Explore Articles</button>
+          <a routerLink="/list"><button class="btn btn-outline-light mt-3">Explore Articles</button></a>
         </div>
       </div>
     </div>
@@ -13,7 +13,6 @@
 </div>
 
 <div class="container py-5">
-  <!-- Featured Post -->
   <div class="featured-post mb-5">
     <div class="row">
       <div class="col-12">
@@ -36,7 +35,7 @@
             <p class="card-text">Exploring the latest trends and technologies that are reshaping how we build for the web. From AI-assisted coding to the rise of new frameworks, discover what's next.</p>
             <div class="d-flex justify-content-between align-items-center mt-4">
               <span class="read-time">8 min read</span>
-              <a href="#" class="btn btn-dark">Read Article</a>
+              <a routerLink="/post/:id" class="btn btn-dark">Read Article</a>
             </div>
           </div>
         </div>
@@ -44,7 +43,6 @@
     </div>
   </div>
 
-  <!-- Recent Posts Grid -->
   <div class="recent-posts mb-5">
     <div class="row">
       <div class="col-12">
@@ -67,7 +65,7 @@
             <p class="card-text">A look at how artificial intelligence tools are changing the landscape of content creation for bloggers and marketers.</p>
             <div class="post-footer">
               <small class="text-muted">5 mins read</small>
-              <a href="#" class="read-more">Read More →</a>
+              <a routerLink="/post/:id" class="read-more">Read More →</a>
             </div>
           </div>
         </div>
